@@ -1,1 +1,108 @@
-Placeholder content for index.html
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Drone Swarm Command UI</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+  <header>
+
+    <img src="https://raw.githubusercontent.com/AllanAiran/Airan-Defense-Technology-Philippines-Logo-/main/PSX_20250713_134211%20(1)~2.jpg" alt="Airan Defense Logo" class="logo" />
+
+    <h1>Swarm Drone Command Console</h1>
+
+  </header>
+
+  <main>
+
+    <section class="camera-feed">
+
+      <h2>Live Drone Camera View</h2>
+
+      <div id="camera-container">
+        <video id="webcam" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+      </div>
+
+    </section>
+
+    <section class="controls">
+
+      <h2>Operator Controls</h2>
+
+      <div class="joystick">🕹️</div>
+
+      <button onclick="launchSwarm()">Launch Swarm</button>
+
+      <button onclick="abortMission()">Abort Mission</button>
+
+      <button onclick="selfDestruct()">Self-Destruct</button>
+
+    </section>
+
+    <section class="telemetry">
+
+      <h2>Drone Telemetry</h2>
+
+      <ul>
+
+        <li>Battery: <span id="battery">--%</span></li>
+
+        <li>Altitude: <span id="altitude">-- m</span></li>
+
+        <li>Speed: <span id="speed">-- km/h</span></li>
+
+        <li>Signal: <span id="signal">--%</span></li>
+
+        <li>Status: <span id="status">Disconnected</span></li>
+
+      </ul>
+
+    </section>
+
+    <section>
+
+      <div id="dronePanel">
+
+        <h2>Drone Status Panel</h2>
+
+        <ul id="droneList"></ul>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2025
+      <img src="https://raw.githubusercontent.com/AllanAiran/Airan-Defense-Technology-Philippines-Logo-/main/PSX_20250713_134211%20(1)~2.jpg" alt="Logo" style="width: 50px; height: auto; border-radius: 30px; vertical-align: middle;" />
+      <span class="airan-brand">Airan Defense Technology Philippines</span>
+    </p>
+    <p>All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- TensorFlow Libraries -->
+
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+  <script src="ai.js"></script>
+
+</body>
+
+</html>
