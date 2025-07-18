@@ -177,3 +177,17 @@ li {
 
   border-bottom: 1px solid #333;
 }
+
+#drone-status-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.drone-card {
+  border: 1px solid #ccc;
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  width: 150px;
+}
