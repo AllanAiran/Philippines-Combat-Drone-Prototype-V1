@@ -258,3 +258,50 @@ const DRONE_URL =
 
 const ENEMY_URL =
   "https://raw.githubusercontent.com/AllanAiran/data.json/main/enemies.json";
+
+import { createDroneStatusCards } from './drones.js';
+import { drawRadar } from './utils.js';
+
+window.addEventListener('DOMContentLoaded', () => {
+  createDroneStatusCards();
+  drawRadar();
+});
+
+export function createDroneStatusCards() {
+  const container = document.getElementById('drone-status-container');
+
+  for (let i = 1; i <= 20; i++) {
+    const card = document.createElement('div');
+    card.className = 'drone-card';
+    card.innerHTML = `
+      <strong>Drone #${i}</strong><br>
+      Status: <span id="status-${i}">READY</span><br>
+      Mission: <span id="mission-${i}">Idle</span>
+    `;
+    container.appendChild(card);
+  }
+}
+
+export function drawRadar() {
+  const canvas = document.getElementById('radar-screen');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  ctx.fillStyle = '#111';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.strokeStyle = '#0f0';
+  for (let r = 50; r < canvas.width / 2; r += 50) {
+    ctx.beginPath();
+    ctx.arc(canvas.width / 2, canvas.height / 2, r, 0, 2 * Math.PI);
+    ctx.stroke();
+  }
+
+  ctx.strokeStyle = '#090';
+  ctx.beginPath();
+  ctx.moveTo(canvas.width / 2, 0);
+  ctx.lineTo(canvas.width / 2, canvas.height);
+  ctx.moveTo(0, canvas.height / 2);
+  ctx.lineTo(canvas.width, canvas.height / 2);
+  ctx.stroke();
+}
