@@ -1,1 +1,179 @@
-Placeholder content for style.css
+body {
+  margin: 0;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  background-color: #121212;
+
+  color: #e0e0e0;
+}
+
+header {
+  background-color: #1e1e1e;
+
+  padding: 1rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+main {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+
+  padding: 1rem;
+}
+
+section {
+  background-color: #1c1c1c;
+
+  padding: 1rem;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.controls {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.controls button {
+  padding: 0.75rem;
+
+  font-size: 1rem;
+
+  background-color: #00bcd4;
+
+  border: none;
+
+  color: #fff;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #0097a7;
+}
+
+.telemetry ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+.telemetry li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+
+  padding: 1rem;
+
+  background-color: #1e1e1e;
+
+  font-size: 0.9rem;
+
+  color: #aaa;
+}
+
+video,
+canvas {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: auto;
+
+  max-width: 480px;
+}
+
+#camera-container {
+  position: relative;
+
+  display: inline-block;
+
+  width: 100%;
+
+  max-width: 480px;
+
+  height: auto;
+}
+
+#status {
+  color: lime;
+  margin: 8px;
+}
+
+.airan-brand {
+  color: #c3b091;
+
+  font-weight: bold;
+
+  margin-left: 4px;
+}
+
+.airan-logo {
+  width: 18px;
+
+  height: 18px;
+
+  vertical-align: middle;
+
+  margin-right: 4px;
+}
+
+#dronePanel {
+  background-color: #111;
+
+  color: #0f0;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  font-family: monospace;
+}
+
+ul {
+  list-style-type: none;
+
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+
+  padding: 5px;
+
+  border-bottom: 1px solid #333;
+}
